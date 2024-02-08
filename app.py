@@ -59,9 +59,9 @@ def temperatura():
         df_t = pd.read_excel(caminho_arquivo, sheet_name='Teste T Temperatura')
 
         #Teste T de Temperatura:
-        com_chuva = df_t['Até 30']
-        sem_chuva = df_t['Acima de 30']
-        t_statistic, p_value = stats.ttest_ind(com_chuva, sem_chuva)
+        ate_30 = df_t['Até 30']
+        acima_30 = df_t['Acima de 30']
+        t_statistic, p_value = stats.ttest_ind(ate_30, acima_30)
         
         #Gráfico de Temperatura:
         x = df['Data']
